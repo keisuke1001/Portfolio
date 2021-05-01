@@ -1,0 +1,307 @@
+/* 共通部分 */
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap');
+
+body::before {
+  content: "";
+  position: fixed;
+  height: 8px;
+  width: 100%;
+  display: block;
+  background-color: #009169;
+}
+
+/* head */
+header {
+  padding-bottom: 30px;
+}
+
+.logo {
+  color: #000;
+  font-size: 3.2rem;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.m-nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 25px;
+  padding-right: 10px;
+  padding-left: 10px;
+  align-items: center;
+  margin: auto;
+}
+
+/* Global Nav */
+.show_spnav.g_Nav {
+  top: 0;
+}
+.g_Nav {
+  position: fixed;
+  left: 0;
+  top: -120%;
+  width: 100%;
+  height: 100%;
+  background-color: #009169;
+  padding-top: 100px;
+  z-index: 99;
+}
+
+.local_link {
+  padding-top: 30px;
+  margin-right: 0;
+  padding-right: 10px;
+  padding-left: 30px;
+  text-align-last: left;
+}
+
+li {
+  padding: 8px 0;
+}
+
+li a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 3rem;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.git {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+}
+
+/* hum btn */
+.hamburger {
+  position: fixed;
+  top: 27px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  z-index: 999;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  margin: auto;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #009169;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc((100% - 4px)/2)
+}
+
+.hum_btn {
+  position: fixed;
+}
+
+.line-t {
+  transform: translateY(-14px);
+}
+
+.line-m {
+
+}
+
+.line-b {
+  transform: translateY(14px);
+}
+
+.open_nav .line-t {
+  transform: rotate(45deg);
+  background-color: #fff;
+}
+
+.open_nav .line-m {
+  opacity: 0;
+}
+
+.open_nav .line-b {
+  transform: rotate(-45deg);
+  background-color: #fff;
+}
+
+/* SP Header */
+@media screen and (min-width: 768px){
+  .m-nav {
+    flex-wrap: nowrap;
+    max-width: 1080px;
+    padding-top: 40px;
+  }
+
+  .g_Nav {
+    position: relative;
+    top: 0;
+    background-color: transparent;
+    padding: 0;
+    width: auto;
+  }
+
+  .g_Nav ul {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .local_link {
+    padding: 0;
+  }
+
+  .local_link li {
+    padding: 0 10px;
+  }
+
+  .local_link li:nth-of-type(4) {
+    padding: 0 0 0 10px;
+  }
+
+  .local_link li a {
+  color: #000;
+  font-weight: bold;
+  font-size: 2rem;
+  font-family: 'Nunito Sans', sans-serif;
+  }
+
+  .git {
+  width: 18px;
+  height: 18px;
+  fill: #000;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+/* Footer */
+footer {
+  padding-top: 10px;
+  margin-right: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+footer::before {
+  content: "";
+  display: block;
+  background-color: #000;
+  width: 100%;
+  height: 1px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.work_category {
+  padding-top: 30px;
+  margin-right: 0;
+}
+
+.work_category ol {
+  display: flex;
+  padding-top: 10px;
+}
+
+.work_category a {
+  color: #000;
+  text-decoration: underline;
+  font-weight: 200;
+  font-size: 1.2rem;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.work_category li{
+  padding: 0 10px;
+}
+
+.work_category li:nth-of-type(1){
+  padding: 0 10px 0 0;
+}
+
+.f_Nav {
+  padding: 30px 0;
+  margin-right: 0;
+}
+
+.f_Nav ul {
+  display: flex;
+}
+
+.f_Nav li {
+  padding: 0 10px;
+}
+
+.f_Nav li:nth-of-type(1) {
+  padding: 0 10px 0 0;
+}
+
+.f_Nav a {
+  color: #000;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.copy {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.page_top {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px){
+  footer {
+  max-width: 1080px;
+  margin: 0 auto;
+  }
+
+  h3 {
+  font-size: 1.8rem;
+  font-family: 'Nunito Sans', sans-serif;
+  }
+
+  .work_category a {
+  font-weight: 400;
+  font-size: 1.4rem;
+  }
+
+  .f_Nav a {
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+
+  .f-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
