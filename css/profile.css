@@ -86,7 +86,6 @@ h2 {
 
 .pro_img {
   text-align: center;
-  padding: 0px 0;
 }
 
 .pro_name {
@@ -156,6 +155,10 @@ h2 {
 
 .e-mail svg {
   padding-right: 20px;
+}
+
+.e-mail a {
+  color: #000;
 }
 
 @media screen and (max-width: 768px) {
